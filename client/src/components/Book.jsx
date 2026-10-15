@@ -12,14 +12,14 @@ const Book = ({ab, handleStatusUpdate, handleDeleteBook}) => {
                                 <button
                                     type="button"
                                     onClick={() => handleStatusUpdate(ab._id, ab.status === "read" ? "unread" : "read")}
-                                    className="rounded-full bg-emerald-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-emerald-600"
+                                    className="rounded-full bg-blue-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-emerald-600"
                                 >
                                     Mark as {ab.status === "read" ? "unread" : "read"}
                                 </button>
                                 <button
                                     type="button"
                                     onClick={() => handleDeleteBook(ab._id)}
-                                    className="rounded-full bg-red-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-red-600"
+                                    className="rounded-full bg-yellow-500 px-3 py-1.5 text-sm font-medium text-white transition hover:bg-red-600"
                                 >
                                     Delete
                                 </button>
