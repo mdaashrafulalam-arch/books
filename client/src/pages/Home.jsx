@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import Book from "../components/Book";
 
-const getErrorMessage = (error) => error.response?.data?.message || "Please try again."
+const getErrorMessage = (error) => error.response?.data?.message || "Please try again later."
 
 const Home = () => {
     const [title, setTitle] = useState("")
@@ -24,7 +24,7 @@ const Home = () => {
 
         try {
             await axios.post("https://bookshelf-manager-02.vercel.app/add-book", { title, author })
-            toast.success("Books added successfully")
+            toast.success("Congratulations!!!Books added successfully")
             setTitle("")
             setAuthor("")
             await fetchBooks()
@@ -50,7 +50,7 @@ const Home = () => {
 
         try {
             await axios.delete(`https://bookshelf-manager-02.vercel.app/books/${bookId}`)
-            toast.success("Book deleted successfully")
+            toast.success("Book has been deleted successfully")
             await fetchBooks()
         } catch (error) {
             toast.error(`Could not delete book. ${getErrorMessage(error)}`)
