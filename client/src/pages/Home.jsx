@@ -99,12 +99,12 @@ const Home = () => {
                         type="submit"
                         className="w-full max-w-md rounded-xl bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-600 focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                     >
-                        Add Book
+                        Add a new book...
                     </button>
                 </form>
             </div>
             <div className="space-y-4 pl-4">
-                <h2 className="text-2xl font-semibold mb-3">Your Books</h2>
+                <h2 className="text-2xl font-semibold mb-3">My Books...</h2>
                 {allBooks.map((ab) => (
                     <Book key={ab._id} ab={ab} handleStatusUpdate={handleStatusUpdate} handleDeleteBook={handleDeleteBook} />
                 ))}
